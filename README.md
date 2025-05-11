@@ -10,3 +10,20 @@ This repository contains presentation slides and source code that show how to im
 ## License
 
 The content of this repository is licensed under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+
+
+## DbSchema
+
+
+I'm currently working on a product called DbSchema, which is the ultimate database design and management tool:
+* connect to a wide range of databases
+* visually design the database schema
+* generate documentation
+* use multi-level master-detail trees
+* build queries visually
+* generate migration scripts
+* ... and much more
+
+Check it out: [https://dbschema.com/](https://dbschema.com/?utm_source=cvmocanu-github-clean-tests)
+
+[![DbSchema logo](https://dbschema.com/img/favicon/favicon.svg)](https://dbschema.com/?utm_source=cvmocanu-github-clean-tests)
