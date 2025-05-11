@@ -3,10 +3,15 @@
 *.iws
 *.ipr
 *.iml
+out/
+
+# Gradle
+.gradle/
+.kotlin/
+build/
 
 # LibreOffice locks
 .~lock.*#
 
 # draw.io diagram backups
 .$*.bkp
-

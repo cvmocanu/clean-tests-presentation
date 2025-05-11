@@ -17,6 +17,8 @@
 * code smells & fixes
   * false positives
     * flaky tests (especially multi-threaded tests)
+      * multi-threaded -> proper locking or, even better, test just the sync part of the code
+      * shared fixture + parallel tests
     * mocks / testing a particular implementation: cripples your refactoring
   * bad test names
   * share setup - couples tests with each other, making it difficult to change one test without braking another
@@ -32,6 +34,5 @@
 * single most important take away: treat test code with the same care as production code, including refactoring, creating abstractions, etc. - do anything that is needed to make the tests easy to understand
 
 
-## Outline
-* slides (max 10-15 minutes)
-* hands-on refactoring in IntelliJ (the rest of the time)
+## Code smells & fixes
+* bad test names
