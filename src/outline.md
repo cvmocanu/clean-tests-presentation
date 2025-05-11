@@ -1,12 +1,6 @@
 # Outline
 
 ## Ideas
-* good tests
-  * clean test code
-  * testable production code (SOLID principles, dependency injection, immutability, etc.)
-    * if the production code is not easy to tests, the tests will be bad
-  * we won't discuss testable code principles
-    * it's important, but we don't have time
 * why are tests important?
   * 2 reasons (there are many others)
     * it saves you time (and thus money)
