@@ -6,3 +6,7 @@
 
 # LibreOffice locks
 .~lock.*#
+
+# draw.io diagram backups
+.$*.bkp
+
