@@ -6,12 +6,17 @@ import org.junit.jupiter.api.Test
 
 class MissingAssertionTest : WithAssertions {
 
+    // do: assertThat(...).isEqualTo(...)
     // do: assertThatCode { ... }.doesNotThrowAnyException()
 
     @Test
+    fun `should add correctly`() {
+        MathOperations.add(1, 2)
+    }
+
+    @Test
     fun `should not throw an error when dividing by non-zero`() {
-        assertThatCode { MathOperations.divide(3, 2) }
-            .doesNotThrowAnyException()
+        MathOperations.divide(3, 2)
     }
 
 }
