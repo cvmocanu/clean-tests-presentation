@@ -3,3 +3,6 @@
 *.iws
 *.ipr
 *.iml
+
+# LibreOffice locks
+.~lock.*#
