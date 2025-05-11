@@ -36,3 +36,7 @@
 
 ## Code smells & fixes
 * bad test names
+* magic constant
+* missing assertions
+* assertion too broad (e.g. assertTrue(foo != null))
+* 
