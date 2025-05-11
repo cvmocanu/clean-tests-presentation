@@ -1,4 +1,4 @@
-package com.mocanu.clean_tests_presentation.x_02_magic_constant
+package com.mocanu.clean_tests_presentation.x_03_magic_constant
 
 class PersonStore {
 

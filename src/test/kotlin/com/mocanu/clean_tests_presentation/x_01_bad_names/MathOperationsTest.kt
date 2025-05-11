@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test
 
 class MathOperationsTest : WithAssertions {
 
+    // tell: using WithAssertions from assertj
     // * do: bad test names
     //   > good names
     //   > kotlin names
