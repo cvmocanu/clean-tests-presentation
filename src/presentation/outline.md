@@ -35,6 +35,5 @@
 
 
 ## Code smells & fixes
-* missing assertions
 * assertion too broad (e.g. assertTrue(foo != null))
 * 
