@@ -19,7 +19,7 @@
     * too much assertion code -> encapsulate assertion code
     * irrelevant detail
     * should be: setup, call SUT, assert
-  * duplication (setup, assertions)
+  * duplication (setup, assertions) -> extract test infra code (test data builders, custom assertions)
 * cherry-on-the-cake: Kotlin DSL
 * single most important take away: treat test code with the same care as production code, including refactoring, creating abstractions, etc. - do anything that is needed to make the tests easy to understand
 
@@ -33,6 +33,7 @@
 * missing cleanup (e.g. DB records), order of tests matter
   * Consequence: State leaks between tests.
   * recommend: cleanup before the test, to be able to inspect the DB after a test failure
+    * if you use Spring Boot, avoid `@Transactional` tests (no way to see the DB state after a failure)
 * shared DB fixture
   * on purpose: to save time writing test code
   * accidental: depending on DB state configured by previously executed tests
@@ -50,12 +51,25 @@
   * fix: for every test, intentionally make it fail (e.g. by having a wrong expected result), and make sure you're happy with the result
     * add assertion messages, including any needed debug information
 
+* Assertions on irrelevant details
+  * Consequence: Tests break unnecessarily.
+  * Fix: Assert only on observable, relevant behavior.
+
+* Unclear boundaries between setup, execution, and verification
+  * Consequence: Cognitive load increases.
+  * Fix: Structure tests clearly (Arrange-Act-Assert pattern).
+
+* Monolithic test classes/files
+  * Consequence: Hard to find and understand tests.
+  * Fix: Split into smaller, focused test classes.
+    * => it's not required to have a test class per production class; focus on testing features, not classes
+
 
 ## Principles
 * one test per functional requirement (the test name should explain the requirement)
-* prepare, execute, validate
+* setup, execute, verify
   * in this order
-  * without interleaving, e.g. "prepare,, execute, validate, execute, validate" is not good
+  * without interleaving, e.g. "setup, execute, verify, execute, verify" is not good
 * no irrelevant detail
   * use test data builders
   * use custom assertion
