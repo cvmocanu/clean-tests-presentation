@@ -7,6 +7,13 @@ We all know the importance of automated tests. But many times tests are treated 
 This repository contains presentation slides and source code that show how to improve your automated tests.
 
 
+## Contents
+
+You can find the slides in the root of the repository: [clean-tests-presentation.pdf](clean-tests-presentation.pdf).
+
+You can find the source code in [src/main/kotlin](src/main/kotlin) and [src/test/kotlin](src/test/kotlin).
+
+
 ## License
 
 The content of this repository is licensed under the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
@@ -26,4 +33,4 @@ I'm currently working on a product called DbSchema, which is the ultimate databa
 
 Check it out: [https://dbschema.com/](https://dbschema.com/?utm_source=cvmocanu-github-clean-tests)
 
-[![DbSchema logo](https://dbschema.com/img/favicon/favicon.svg)](https://dbschema.com/?utm_source=cvmocanu-github-clean-tests)
+[![DbSchema logo](https://dbschema.com/img/favicon/favicon.svg?utm_source=cvmocanu-github-clean-tests)](https://dbschema.com/?utm_source=cvmocanu-github-clean-tests)
