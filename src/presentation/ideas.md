@@ -14,6 +14,8 @@
         * use test data builders / fixture builders
     * execute
       * too many calls to the SUT -> what is being tested? should do a single call
+        * split to multiple tests
+        * or extract fixture utility
     * assert
       * missing assertion
       * multiple assertions per test (what are we actually testing?)

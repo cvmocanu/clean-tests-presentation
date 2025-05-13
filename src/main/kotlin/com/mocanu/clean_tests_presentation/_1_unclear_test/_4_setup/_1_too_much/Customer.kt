@@ -6,4 +6,10 @@ data class Customer(
     val age: Int,
     val address: Address,
     val accountBalanceEuroCents: Long,
-)
+) {
+
+    fun accountIsOverdrawn(): Boolean = (accountBalanceEuroCents < 0)
+
+    fun isLegallyAllowedToWithdraw(): Boolean = (age >= 18)
+
+}

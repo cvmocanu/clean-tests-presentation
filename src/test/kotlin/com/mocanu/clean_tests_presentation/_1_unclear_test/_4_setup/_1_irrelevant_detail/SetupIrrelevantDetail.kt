@@ -1,6 +1,5 @@
 package com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_irrelevant_detail
 
-import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.Account
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.Address
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.Customer
 import org.assertj.core.api.WithAssertions
@@ -31,9 +30,7 @@ class SetupIrrelevantDetail : WithAssertions {
             accountBalanceEuroCents = -1,
         )
 
-        val account = Account(customer)
-
-        assertThat(account.isOverdrawn())
+        assertThat(customer.accountIsOverdrawn())
             .isTrue()
     }
 
