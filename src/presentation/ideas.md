@@ -16,14 +16,15 @@
       * too many calls to the SUT -> what is being tested? should do a single call
         * split to multiple tests
         * or extract fixture utility
-    * assert
+    * verify
       * missing assertion
+      * too broad
+      * too narrow
       * multiple assertions per test (what are we actually testing?)
       * too much assertion code
         * encapsulate assertion code (custom assertions)
-      * duplication
-      * irrelevant detail
-    * Unclear boundaries between setup, execution, and verification
+      * irrelevant detail + duplication
+    * unclear boundaries between setup, execution, and verification
       * Consequence: Cognitive load increases.
       * Fix: Structure tests clearly (Arrange-Act-Assert pattern).
       * fix: extract {setup, execute} into a higher-level execute

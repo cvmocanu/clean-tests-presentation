@@ -1,11 +1,11 @@
-package com.mocanu.clean_tests_presentation._1_unclear_test._5_execute.too_many
+package com.mocanu.clean_tests_presentation._1_unclear_test._5_execute.multiple
 
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_irrelevant_detail.aValidCustomer
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.Customer
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
 
-class TooManySutExecutions : WithAssertions {
+class MultipleSutExecutions : WithAssertions {
 
     // [tell] `accountIsOverdrawn` should have its own tests
 
