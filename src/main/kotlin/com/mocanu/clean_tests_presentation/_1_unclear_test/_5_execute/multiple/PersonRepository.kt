@@ -8,4 +8,6 @@ object PersonRepository {
 
     fun count(): Int = TODO()
 
+    fun getAll(): List<Person> = TODO()
+
 }

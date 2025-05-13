@@ -13,7 +13,7 @@ class IrrelevantAssertionDetail : WithAssertions {
     // [do  ] delete irrelevant assertions
 
     @Test
-    fun test() {
+    fun `should update the name correctly`() {
         val customer: Customer = aValidCustomer()
             .copy(name = "Old Name")
 

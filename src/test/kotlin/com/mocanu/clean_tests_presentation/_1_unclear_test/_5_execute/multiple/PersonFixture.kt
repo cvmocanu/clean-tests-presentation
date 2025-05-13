@@ -7,4 +7,13 @@ object PersonFixture {
         PersonRepository.insert(aValidPerson())
     }
 
+    fun givenThePersonTableContainsThePersons(
+        persons: List<Person>,
+    ) {
+        PersonRepository.deleteAllCascade()
+        persons.forEach {
+            PersonRepository.insert(it)
+        }
+    }
+
 }

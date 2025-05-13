@@ -5,3 +5,5 @@ fun aValidPerson() = Person(
     name = "John Doe",
     age = 21,
 )
+
+fun aRandomPerson(): Person = TODO()
