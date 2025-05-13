@@ -20,14 +20,9 @@
       * missing assertion
       * too broad
       * too narrow
-      * multiple assertions per test (what are we actually testing?)
+      * irrelevant detail
       * too much assertion code
         * encapsulate assertion code (custom assertions)
-      * irrelevant detail + duplication
-    * unclear boundaries between setup, execution, and verification
-      * Consequence: Cognitive load increases.
-      * Fix: Structure tests clearly (Arrange-Act-Assert pattern).
-      * fix: extract {setup, execute} into a higher-level execute
   * time-consuming maintenance
     * flaky tests
       * multithreaded (e.g. Thread.sleep()) -> proper locking (e.g. using CountDownLatch) or, make the test synchronous, by waiting on a Future
