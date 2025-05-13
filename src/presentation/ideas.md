@@ -2,9 +2,7 @@
 * code smells & fixes
   * unclear test
     * unclear failure
-      * when the test fails
-        * it's not clear what went wrong
-        * or it's not clear why it went wrong (e.g. what do I do now to fix this?)
+      * when the test fails, it's not clear why it went wrong (e.g. what do I do now to fix this?)
       * fix: for every test, intentionally make it fail (e.g. by having a wrong expected result), and make sure you're happy with the result
         * add assertion messages, including any needed debug information
     * monolithic test class
