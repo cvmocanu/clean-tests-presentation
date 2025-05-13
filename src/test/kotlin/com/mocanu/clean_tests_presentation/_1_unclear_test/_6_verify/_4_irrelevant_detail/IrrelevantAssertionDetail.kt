@@ -8,9 +8,12 @@ import org.junit.jupiter.api.Test
 
 class IrrelevantAssertionDetail : WithAssertions {
 
+
     // [show] the test
     // [tell] hard to understand what it does
     // [do  ] delete irrelevant assertions
+
+    private val customerRepository = CustomerRepository()
 
     @Test
     fun `should update the name correctly`() {
@@ -19,28 +22,29 @@ class IrrelevantAssertionDetail : WithAssertions {
 
         CustomerFixture.givenASingleCustomerInTheDatabase(customer)
 
-        CustomerRepository.updateName(
+        customerRepository.updateName(
             id = customer.id,
             newName = "New Name",
         )
 
-        assertThat(CustomerRepository.getById(customer.id).id)
+        val updatedCustomer: Customer = customerRepository.getById(customer.id)
+        assertThat(updatedCustomer.id)
             .isEqualTo(customer.id)
-        assertThat(CustomerRepository.getById(customer.id).name)
+        assertThat(updatedCustomer.name)
             .isEqualTo("New Name")
-        assertThat(CustomerRepository.getById(customer.id).age)
+        assertThat(updatedCustomer.age)
             .isEqualTo(customer.age)
-        assertThat(CustomerRepository.getById(customer.id).address.countryCode)
+        assertThat(updatedCustomer.address.countryCode)
             .isEqualTo(customer.address.countryCode)
-        assertThat(CustomerRepository.getById(customer.id).address.province)
+        assertThat(updatedCustomer.address.province)
             .isEqualTo(customer.address.province)
-        assertThat(CustomerRepository.getById(customer.id).address.city)
+        assertThat(updatedCustomer.address.city)
             .isEqualTo(customer.address.city)
-        assertThat(CustomerRepository.getById(customer.id).address.postCode)
+        assertThat(updatedCustomer.address.postCode)
             .isEqualTo(customer.address.postCode)
-        assertThat(CustomerRepository.getById(customer.id).address.streetLine)
+        assertThat(updatedCustomer.address.streetLine)
             .isEqualTo(customer.address.streetLine)
-        assertThat(CustomerRepository.getById(customer.id).accountBalanceEuroCents)
+        assertThat(updatedCustomer.accountBalanceEuroCents)
             .isEqualTo(customer.accountBalanceEuroCents)
     }
 

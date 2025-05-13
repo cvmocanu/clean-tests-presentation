@@ -19,9 +19,11 @@ class UnclearFailure : WithAssertions {
     // * [do  ] re-run the test
     // * [do  ] fix the test: `bluex` -> `blue`
 
+    private val colorsRepository = ColorsRepository()
+
     @Test
     fun `should contain the color blue`() {
-        assertThat(ColorsRepository.getColors().contains("blue"))
+        assertThat(colorsRepository.getColors().contains("blue"))
             .isTrue()
     }
 }

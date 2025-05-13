@@ -5,11 +5,13 @@ import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.
 
 object CustomerFixture {
 
+    private val customerRepository = CustomerRepository()
+
     fun givenASingleCustomerInTheDatabase(
         customer: Customer,
     ) {
-        CustomerRepository.deleteAllCascade()
-        CustomerRepository.insert(customer)
+        customerRepository.deleteAllCascade()
+        customerRepository.insert(customer)
     }
 
 }

@@ -25,10 +25,6 @@
         * encapsulate assertion code (custom assertions)
   * time-consuming maintenance
     * flaky tests
-      * multithreaded (e.g. Thread.sleep()) -> proper locking (e.g. using CountDownLatch) or, make the test synchronous, by waiting on a Future
-      * relying on system clock
-        * Consequence: Non-deterministic tests (slow CI/CD, daylight saving changes, slow test, etc.)
-        * Fix: Use time abstraction/mockable clock.
       * accidentally shared fixture - execution order of tests matters
         * global static state
           * quick fix: reset the state before the tests

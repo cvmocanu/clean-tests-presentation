@@ -2,17 +2,19 @@ package com.mocanu.clean_tests_presentation._1_unclear_test._5_execute.multiple
 
 object PersonFixture {
 
+    private val personRepository = PersonRepository()
+
     fun givenThePersonTableContainsASingleValidPerson() {
-        PersonRepository.deleteAllCascade()
-        PersonRepository.insert(aValidPerson())
+        personRepository.deleteAllCascade()
+        personRepository.insert(aValidPerson())
     }
 
     fun givenThePersonTableContainsThePersons(
         persons: List<Person>,
     ) {
-        PersonRepository.deleteAllCascade()
+        personRepository.deleteAllCascade()
         persons.forEach {
-            PersonRepository.insert(it)
+            personRepository.insert(it)
         }
     }
 

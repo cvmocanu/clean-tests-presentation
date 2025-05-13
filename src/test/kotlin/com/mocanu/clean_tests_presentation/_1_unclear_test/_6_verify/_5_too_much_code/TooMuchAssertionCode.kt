@@ -17,6 +17,8 @@ class TooMuchAssertionCode : WithAssertions {
     //          - companion: assertThatListOfPersons(actual: List<Person>)
     //          - member: isEqualIgnoringOrderTo(expected: List<Person>)
 
+    private val personRepository = PersonRepository()
+
     @Test
     fun `should retrieve the list of persons`() {
         val persons: List<Person> = List(10) {
@@ -24,7 +26,7 @@ class TooMuchAssertionCode : WithAssertions {
         }
         PersonFixture.givenThePersonTableContainsThePersons(persons)
 
-        val actualPersons: List<Person> = PersonRepository.getAll()
+        val actualPersons: List<Person> = personRepository.getAll()
 
         val sortedExpected: List<Person> = persons.sortedWith(Person.COMPARATOR)
         val sortedActual: List<Person> = actualPersons.sortedWith(Person.COMPARATOR)

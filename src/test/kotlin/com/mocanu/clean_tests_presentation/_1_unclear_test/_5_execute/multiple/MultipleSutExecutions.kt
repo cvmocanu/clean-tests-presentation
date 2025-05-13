@@ -7,7 +7,16 @@ import org.junit.jupiter.api.Test
 
 class MultipleSutExecutions : WithAssertions {
 
+    private val personRepository = PersonRepository()
+
     // [tell] `accountIsOverdrawn` should have its own tests
+    //        When a bug occurs, it's good to know exactly what's
+    //        wrong, rather than waste a lot of time debugging.
+    //
+    // [tell] it's obvious here, but in real life, you
+    //        may be reluctant to copy/paste a long test
+    //        Solution: first extract Setup/Verification code
+    //        and then split the test into 2 or more tests
 
     @Test
     fun `a legal adult should be legally allowed to withdraw`() {
@@ -44,10 +53,10 @@ class MultipleSutExecutions : WithAssertions {
 
     @Test
     fun `should count persons correctly`() {
-        PersonRepository.deleteAllCascade()
-        PersonRepository.insert(aValidPerson())
+        personRepository.deleteAllCascade()
+        personRepository.insert(aValidPerson())
 
-        assertThat(PersonRepository.count())
+        assertThat(personRepository.count())
             .isEqualTo(1)
     }
 

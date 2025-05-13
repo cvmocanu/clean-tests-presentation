@@ -10,6 +10,7 @@ class AssertionTooNarrow : WithAssertions {
     // [show] the test
     // [show] the `returns` section of the javadoc of
     //        `Comparator.compare()`
+    // [tell] right now, we are testing a particular implementation
     // [do  ] replace with `.isLessThan(0)`
 
     @Test
@@ -17,7 +18,7 @@ class AssertionTooNarrow : WithAssertions {
         val left: Person = aValidPerson().copy(name = "Alex", age = 13)
         val right: Person = aValidPerson().copy(name = "Alex", age = 14)
 
-        assertThat(Person.Companion.COMPARATOR.compare(left, right))
+        assertThat(Person.COMPARATOR.compare(left, right))
             .isEqualTo(-1)
     }
 
