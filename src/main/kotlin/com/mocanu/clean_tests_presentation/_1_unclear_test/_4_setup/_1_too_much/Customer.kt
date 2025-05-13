@@ -8,8 +8,19 @@ data class Customer(
     val accountBalanceEuroCents: Long,
 ) {
 
-    fun accountIsOverdrawn(): Boolean = (accountBalanceEuroCents < 0)
+    fun accountIsOverdrawn(): Boolean =
+        (accountBalanceEuroCents < 0)
+
+    fun accountIsHealthy(): Boolean =
+        (accountBalanceEuroCents >= 10_00)
 
     fun isLegallyAllowedToWithdraw(): Boolean = (age >= 18)
+
+    fun isAllowedToWithdraw(amountInEuroCents: Long): Boolean =
+        (amountInEuroCents <= (accountBalanceEuroCents + OVERDRAFT_LIMIT))
+
+    companion object {
+        const val OVERDRAFT_LIMIT = 5_00L
+    }
 
 }

@@ -26,25 +26,22 @@
   * time-consuming maintenance
     * flaky tests
       * accidentally shared fixture - execution order of tests matters
-        * global static state
-          * quick fix: reset the state before the tests
-          * better fix: change prod code to no longer rely on global state
         * DB state
           * fix: reset/cleanup **before** the test, to be able to inspect the DB after a test failure
             * if you use Spring Boot, avoid `@Transactional` tests (no way to see the DB state after a failure)
-    * shared fixture
+    * intentionally shared fixture
       * usually done on purpose: to save time writing test code
       * couples tests with each other, making it difficult to change one test without braking another one
     * mocks
+      * missing tests for mocked code (own code) - e.g. you're testing with an H2 in-memory database with Postgres compatibility mode, but Postgres in prod; your tests pass, but a query breaks in production => test as much as possible similar to prod (e.g. Postgres inside docker)
+        * if you mock your repository/DAO classes to test your services, don't forget to also test your repository classes
+        * alternatively, if your DB queries change a lot, consider your repository/DAO classes an implementation detail, and test your services with a real database
       * testing a particular implementation: cripples your refactoring => Test behavior, not internals
         * mock only at the system boundaries - e.g. mock an HTTP API, since that is not an implementation detail, it's a contract you have with other teams
           * if you mock an HTTP client class, to test your services, don't forget to test your HTTP client class also, using e.g. wiremock
         * in addition, when using e.g. Mockito to create stubs, make sure you configure the stubs to be lenient (don't break the test if the stub wasn't called)
       * wrong mock for code you don't own - e.g. when mocking a 3rd party API, but your mock is behaving differently from the actual API
-      * missing tests for mocked code (own code) - e.g. you're testing with an H2 in-memory database with Postgres compatibility mode, but Postgres in prod; your tests pass, but a query breaks in production => test as much as possible similar to prod (e.g. Postgres inside docker)
-        * if you mock your repository/DAO classes to test your services, don't forget to also test your repository classes
-        * alternatively, if your DB queries change a lot, consider your repository/DAO classes an implementation detail, and test your services with a real database
-* cherry-on-the-cake: Kotlin DSL
+* cherry-on-the-cake: Java & Kotlin DSL
 * single most important take away: treat test code with the same care as production code, including refactoring, creating abstractions, etc. - do anything that is needed to make the tests easy to understand
 
 ## Principles
