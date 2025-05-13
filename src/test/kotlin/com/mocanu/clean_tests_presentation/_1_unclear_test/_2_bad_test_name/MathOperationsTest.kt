@@ -1,15 +1,15 @@
-package com.mocanu.clean_tests_presentation.old.x_01_bad_names
+package com.mocanu.clean_tests_presentation._1_unclear_test._2_bad_test_name
 
+import com.mocanu.clean_tests_presentation.com.mocanu.clean_tests_presentation.old.x_01_bad_names.MathOperations
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
 
 class MathOperationsTest : WithAssertions {
 
-    // tell: using WithAssertions from assertj
-    // * do: bad test names
-    //   > good names
-    //   > kotlin names
-    // * do: missing test cases (division by zero)
+    // [tell] test1, test2, ...
+    // [tell] the test name should explain the functional requirement
+    // [do  ] rename, using kotlin names (e.g. `should add correctly`)
+    // [tell] missing test cases (division by zero); always test boundary conditions
 
     @Test
     fun test1() {

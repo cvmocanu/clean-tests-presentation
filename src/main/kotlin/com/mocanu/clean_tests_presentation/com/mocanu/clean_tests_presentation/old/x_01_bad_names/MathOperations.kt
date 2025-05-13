@@ -1,6 +1,7 @@
-package com.mocanu.clean_tests_presentation.old.x_01_bad_names
+package com.mocanu.clean_tests_presentation.com.mocanu.clean_tests_presentation.old.x_01_bad_names
 
 object MathOperations {
+
     fun add(left: Int, right: Int): Int = left + right
 
     fun subtract(left: Int, right: Int): Int = left - right
@@ -8,4 +9,5 @@ object MathOperations {
     fun multiply(left: Int, right: Int): Int = left * right
 
     fun divide(left: Int, right: Int): Int = left / right
+
 }

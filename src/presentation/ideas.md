@@ -5,10 +5,6 @@
       * when the test fails, it's not clear why it went wrong (e.g. what do I do now to fix this?)
       * fix: for every test, intentionally make it fail (e.g. by having a wrong expected result), and make sure you're happy with the result
         * add assertion messages, including any needed debug information
-    * monolithic test class
-      * Consequence: Hard to find and understand tests.
-      * Fix: Split into smaller, focused test classes.
-        * => it's not required to have name test class after the production classes; focus on testing features, not classes
     * bad test name
     * aggregate test - testing multiple concerns in one test
       * Consequence: Unclear failure causes.
@@ -23,6 +19,7 @@
     * execute
       * too many calls to the SUT -> what is being tested? should do a single call
     * assert
+      * missing assertion
       * multiple assertions per test (what are we actually testing?)
       * too much assertion code
         * encapsulate assertion code (custom assertions)

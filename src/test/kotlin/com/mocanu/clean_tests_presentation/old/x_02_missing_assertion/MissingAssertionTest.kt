@@ -1,6 +1,6 @@
 package com.mocanu.clean_tests_presentation.old.x_02_missing_assertion
 
-import com.mocanu.clean_tests_presentation.old.x_01_bad_names.MathOperations
+import com.mocanu.clean_tests_presentation.com.mocanu.clean_tests_presentation.old.x_01_bad_names.MathOperations
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
 
