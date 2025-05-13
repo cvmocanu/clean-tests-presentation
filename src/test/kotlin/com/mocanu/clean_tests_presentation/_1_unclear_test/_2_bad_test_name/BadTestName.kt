@@ -1,10 +1,9 @@
 package com.mocanu.clean_tests_presentation._1_unclear_test._2_bad_test_name
 
-import com.mocanu.clean_tests_presentation.com.mocanu.clean_tests_presentation.old.x_01_bad_names.MathOperations
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
 
-class MathOperationsTest : WithAssertions {
+class BadTestName : WithAssertions {
 
     // [tell] test1, test2, ...
     // [tell] the test name should explain the functional requirement

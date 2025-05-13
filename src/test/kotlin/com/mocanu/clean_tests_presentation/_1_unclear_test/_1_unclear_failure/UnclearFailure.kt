@@ -3,8 +3,10 @@ package com.mocanu.clean_tests_presentation._1_unclear_test._1_unclear_failure
 import org.assertj.core.api.WithAssertions
 import org.junit.jupiter.api.Test
 
-class ColorRepositoryTest : WithAssertions {
+class UnclearFailure : WithAssertions {
 
+    // * [tell] class name: I would use `ColorsRepositoryTest`
+    //
     // * [tell] using WithAssertions from assertj
     //
     // * [tell] for every test, intentionally make it fail

@@ -1,4 +1,4 @@
-package com.mocanu.clean_tests_presentation.com.mocanu.clean_tests_presentation.old.x_01_bad_names
+package com.mocanu.clean_tests_presentation._1_unclear_test._2_bad_test_name
 
 object MathOperations {
 

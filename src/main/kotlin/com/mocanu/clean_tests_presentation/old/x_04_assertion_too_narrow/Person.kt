@@ -11,7 +11,3 @@ data class Person(
     }
 
 }
-
-fun main() {
-    println()
-}
