@@ -10,11 +10,7 @@
       * Consequence: Unclear failure causes.
       * Fix: Split into separate tests.
     * setup
-      * too much
-        * use test data builders / fixture builders
-      * irrelevant detail
-        * use test data builders / fixture builders
-      * duplication
+      * irrelevant detail + duplication
         * use test data builders / fixture builders
     * execute
       * too many calls to the SUT -> what is being tested? should do a single call
