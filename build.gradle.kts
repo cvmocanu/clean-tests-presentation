@@ -9,8 +9,7 @@ repositories {
 dependencies {
     testImplementation(libs.junit.jupiter)
     testImplementation(libs.assertj.core)
-    testImplementation(libs.awaitility.core)
-    testImplementation(libs.awaitility.kotlin)
+    testImplementation(libs.mockito.core)
     testRuntimeOnly(libs.junit.platformLauncher)
 }
 

@@ -33,7 +33,7 @@
       * usually done on purpose: to save time writing test code
       * couples tests with each other, making it difficult to change one test without braking another one
     * mocks
-      * missing tests for mocked code (own code) - e.g. you're testing with an H2 in-memory database with Postgres compatibility mode, but Postgres in prod; your tests pass, but a query breaks in production => test as much as possible similar to prod (e.g. Postgres inside docker)
+      * missing tests for mocked code (own code)
         * if you mock your repository/DAO classes to test your services, don't forget to also test your repository classes
         * alternatively, if your DB queries change a lot, consider your repository/DAO classes an implementation detail, and test your services with a real database
       * testing a particular implementation: cripples your refactoring => Test behavior, not internals

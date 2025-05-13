@@ -5,8 +5,7 @@ awaitility = "4.3.0"
 junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version = "5.12.1" }
 junit-platformLauncher = { module = "org.junit.platform:junit-platform-launcher", version = "1.11.4" }
 assertj-core = { module = "org.assertj:assertj-core", version = "3.27.3" }
-awaitility-core = { module = "org.awaitility:awaitility", version.ref = "awaitility" }
-awaitility-kotlin = { module = "org.awaitility:awaitility-kotlin", version.ref = "awaitility" }
+mockito-core = { module = "org.mockito:mockito-core", version = "5.17.0" }
 
 [plugins]
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version = "2.1.20" }

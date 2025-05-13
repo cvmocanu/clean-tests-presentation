@@ -1,4 +1,4 @@
-package com.mocanu.clean_tests_presentation._2_time_consuming_maintenance.x_2_intentionally_shared_fixture
+package com.mocanu.clean_tests_presentation._2_time_consuming_maintenance._2_intentionally_shared_fixture
 
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_irrelevant_detail.aValidCustomer
 import com.mocanu.clean_tests_presentation._1_unclear_test._4_setup._1_too_much.Customer
