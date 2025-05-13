@@ -1,4 +1,4 @@
-package com.mocanu.clean_tests_presentation.x_04_assertion_too_narrow
+package com.mocanu.clean_tests_presentation.old.x_04_assertion_too_narrow
 
 data class Person(
     val name: String,
